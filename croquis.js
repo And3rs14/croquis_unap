@@ -258,9 +258,9 @@ function openModal(key) {
                        (data.stands.length > 1 ? "s" : "") + " registrado" +
                        (data.stands.length > 1 ? "s" : "");
   var html = "";
-  data.stands.forEach(function(s, i) {
+  data.stands.forEach(function(s) {
     html += "<div class='proyecto-item'>" +
-              "<div class='proyecto-num'>" + (i + 1) + "</div>" +
+              "<div class='proyecto-num'>" + s.stand + "</div>" +
               "<div>" +
                 "<div class='proyecto-nombre'>" + highlight(s.proyecto || "Sin nombre", raw) + "</div>" +
                 "<span class='proyecto-rubro'>" + esc(s.rubro) + "</span>" +
