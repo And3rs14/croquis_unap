@@ -826,6 +826,11 @@ const carpasData = {
         "stand": 126,
         "proyecto": "Club de Leones de Punchana",
         "rubro": "Exposición / Bienestar social"
+      },
+      {
+        "stand": 127,
+        "proyecto": "Producción de Peces Nativos Amazonicos y Compost de Mosca Negra.",
+        "rubro": ""
       }
     ]
   },
@@ -833,7 +838,7 @@ const carpasData = {
     "carpa": "C41",
     "stands": [
       {
-        "stand": 127,
+        "stand": 128,
         "proyecto": "Si hay chamba / Dirección Regional del trabajo",
         "rubro": "Exposición / Bienestar social"
       }
@@ -843,7 +848,7 @@ const carpasData = {
     "carpa": "C42",
     "stands": [
       {
-        "stand": 128,
+        "stand": 129,
         "proyecto": "Empresas de la región",
         "rubro": "Exposición / Bienestar social"
       }
@@ -853,7 +858,7 @@ const carpasData = {
     "carpa": "C43",
     "stands": [
       {
-        "stand": 129,
+        "stand": 130,
         "proyecto": "COMPIAL: SENASA",
         "rubro": "Exposición / Ente del Estado"
       }
@@ -863,7 +868,7 @@ const carpasData = {
     "carpa": "C44",
     "stands": [
       {
-        "stand": 130,
+        "stand": 131,
         "proyecto": "COMPIAL: SANIPES",
         "rubro": "Exposición / Ente del Estado"
       }
@@ -873,12 +878,12 @@ const carpasData = {
     "carpa": "C45",
     "stands": [
       {
-        "stand": 131,
+        "stand": 132,
         "proyecto": "COMPIAL: DIRESA",
         "rubro": "Exposición / Ente del Estado"
       },
       {
-        "stand": 132,
+        "stand": 133,
         "proyecto": "Cogestión de las Reservas Comunales Huimeki y Airo Pai",
         "rubro": "Exposición / Medio ambiente"
       }
