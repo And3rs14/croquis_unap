@@ -6,39 +6,93 @@ Object.keys(carpasData).forEach(function(key) {
   });
 });
 
+// ── Colores por carpa (extraídos del croquis oficial) ─────────────
+// bg = fondo, fg = texto
+var carpColors = {
+  "C1":  {bg:"#FFE600", fg:"#1a1a1a"},
+  "C2":  {bg:"#F2F2F2", fg:"#444444"},
+  "C3":  {bg:"#FFFF99", fg:"#1a1a1a"},
+  "C4":  {bg:"#1133BB", fg:"#ffffff"},
+  "C5":  {bg:"#EECCFF", fg:"#1a1a1a"},
+  "C6":  {bg:"#FFB0D5", fg:"#1a1a1a"},
+  "C7":  {bg:"#FF3399", fg:"#ffffff"},
+  "C8":  {bg:"#9922CC", fg:"#ffffff"},
+  "C9":  {bg:"#9922CC", fg:"#ffffff"},
+  "C10": {bg:"#9922CC", fg:"#ffffff"},
+  "C11": {bg:"#9933CC", fg:"#ffffff"},
+  "C12": {bg:"#9933CC", fg:"#ffffff"},
+  "C13": {bg:"#66CCCC", fg:"#1a1a1a"},
+  "C14": {bg:"#F2F2F2", fg:"#444444"},
+  "C15": {bg:"#F2F2F2", fg:"#444444"},
+  "C16": {bg:"#F2F2F2", fg:"#444444"},
+  "C17": {bg:"#F2F2F2", fg:"#444444"},
+  "C18": {bg:"#F2F2F2", fg:"#444444"},
+  "C19": {bg:"#F2F2F2", fg:"#444444"},
+  "C20": {bg:"#00E5FF", fg:"#1a1a1a"},
+  "C21": {bg:"#00E5FF", fg:"#1a1a1a"},
+  "C22": {bg:"#00FFFF", fg:"#1a1a1a"},
+  "C23": {bg:"#00D4EE", fg:"#1a1a1a"},
+  "C24": {bg:"#88EEFF", fg:"#1a1a1a"},
+  "C25": {bg:"#88EEFF", fg:"#1a1a1a"},
+  "C26": {bg:"#00CCCC", fg:"#1a1a1a"},
+  "C27": {bg:"#00CCCC", fg:"#1a1a1a"},
+  "C28": {bg:"#FF00CC", fg:"#ffffff"},
+  "C29": {bg:"#FF00CC", fg:"#ffffff"},
+  "C30": {bg:"#88AAFF", fg:"#1a1a1a"},
+  "C31": {bg:"#CC99FF", fg:"#1a1a1a"},
+  "C32": {bg:"#9955EE", fg:"#ffffff"},
+  "C33": {bg:"#CC99FF", fg:"#1a1a1a"},
+  "C34": {bg:"#994422", fg:"#ffffff"},
+  "C35": {bg:"#F2F2F2", fg:"#444444"},
+  "C36": {bg:"#FF5500", fg:"#ffffff"},
+  "C37": {bg:"#F2F2F2", fg:"#444444"},
+  "C38": {bg:"#F2F2F2", fg:"#444444"},
+  "C39": {bg:"#F2F2F2", fg:"#444444"},
+  "C40": {bg:"#F2F2F2", fg:"#444444"},
+  "C41": {bg:"#F2F2F2", fg:"#444444"},
+  "C42": {bg:"#F2F2F2", fg:"#444444"},
+  "C43": {bg:"#F2F2F2", fg:"#444444"},
+  "C44": {bg:"#F2F2F2", fg:"#444444"},
+  "C45": {bg:"#F2F2F2", fg:"#444444"},
+};
+
 // ── Crear cajas del mapa ──────────────────────────────────────────
 var H = 28;
 var standsMap = [
-  ["C43",28,278,58,"blue"],  ["C44",28,313,58,"blue"],  ["C45",28,348,58,"blue"],
-  ["C28",28,400,58,"teal"],  ["C27",28,438,58,"teal"],  ["C26",28,476,58,"teal"],
-  ["C42",135,212,52,"blue"], ["C41",135,247,52,"blue"], ["C40",135,282,52,"blue"],
-  ["C39",135,317,52,"blue"], ["C38",135,350,52,"blue"], ["C37",135,383,52,"blue"],
-  ["C36",118,446,50,"purple"],["C35",118,478,50,"purple"],
-  ["C25",302,98,52,"teal"],  ["C24",302,133,52,"teal"], ["C23",302,170,52,"orange"],
-  ["C22",302,205,52,"orange"],["C21",302,240,52,"orange"],["C20",302,275,52,"teal"],
-  ["C19",302,310,52,"orange"],["C18",302,343,52,"orange"],["C17",302,376,52,"orange"],
-  ["C16",302,428,52,"orange"],["C15",302,463,52,"orange"],["C14",302,496,52,"orange"],
-  ["C13",462,102,50,"teal"], ["C12",462,137,50,"teal"], ["C11",462,172,50,"teal"],
-  ["C10",462,205,50,"orange"],["C9",462,238,50,"orange"],["C8",462,270,50,"orange"],
-  ["C7",462,300,50,"orange"], ["C6",462,333,50,"orange"],["C5",462,366,50,"orange"],
-  ["C4",462,398,50,"orange"], ["C3",462,430,50,"orange"],["C2",462,463,50,"orange"],
-  ["C1",462,496,50,"orange"],
-  ["C35",199,410,42,"orange",24],["C34",243,410,42,"orange",24],
-  ["C33",199,440,42,"orange",24],["C32",199,470,42,"navy",24],
-  ["C31",197,498,30,"orange",22],["C30",229,498,30,"orange",22],["C29",261,498,28,"orange",22]
+  ["C43",28,278,58],  ["C44",28,313,58],  ["C45",28,348,58],
+  ["C28",28,400,58],  ["C27",28,438,58],  ["C26",28,476,58],
+  ["C42",135,212,52], ["C41",135,247,52], ["C40",135,282,52],
+  ["C39",135,317,52], ["C38",135,350,52], ["C37",135,383,52],
+  ["C36",118,446,50], ["C35",118,478,50],
+  ["C25",302,98,52],  ["C24",302,133,52], ["C23",302,170,52],
+  ["C22",302,205,52], ["C21",302,240,52], ["C20",302,275,52],
+  ["C19",302,310,52], ["C18",302,343,52], ["C17",302,376,52],
+  ["C16",302,428,52], ["C15",302,463,52], ["C14",302,496,52],
+  ["C13",462,102,50], ["C12",462,137,50], ["C11",462,172,50],
+  ["C10",462,205,50], ["C9",462,238,50],  ["C8",462,270,50],
+  ["C7",462,300,50],  ["C6",462,333,50],  ["C5",462,366,50],
+  ["C4",462,398,50],  ["C3",462,430,50],  ["C2",462,463,50],
+  ["C1",462,496,50],
+  ["C35",199,410,42,24], ["C34",243,410,42,24],
+  ["C33",199,440,42,24], ["C32",199,470,42,24],
+  ["C31",197,498,30,22], ["C30",229,498,30,22], ["C29",261,498,28,22]
 ];
 
 var boxEls = {};
 var stage  = document.getElementById("stage");
 
 standsMap.forEach(function(item) {
-  var label = item[0], x = item[1], y = item[2], w = item[3], type = item[4], h = item[5];
+  var label = item[0], x = item[1], y = item[2], w = item[3], h = item[4];
+  var col   = carpColors[label] || {bg:"#F2F2F2", fg:"#444444"};
   var d = document.createElement("div");
-  d.className = "box " + type;
-  d.style.left   = x + "px";
-  d.style.top    = y + "px";
-  d.style.width  = w + "px";
-  d.style.height = (h || H) + "px";
+  d.className = "box";
+  d.style.left        = x + "px";
+  d.style.top         = y + "px";
+  d.style.width       = w + "px";
+  d.style.height      = (h || H) + "px";
+  d.style.background  = col.bg;
+  d.style.color       = col.fg;
+  d.style.borderColor = "rgba(0,0,0,0.2)";
   if (w < 46) d.style.fontSize = "11px";
   d.textContent = label;
   d.addEventListener("click", function() { openModal(label); });

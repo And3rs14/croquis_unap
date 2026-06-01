@@ -118,24 +118,19 @@
             border:7px solid var(--frame); overflow:hidden; }
 
   .box { position:absolute; display:flex; align-items:center; justify-content:center;
-         font-weight:700; font-size:13px; color:#fff;
-         border:2px solid rgba(0,0,0,.2); box-shadow:1px 1px 0 rgba(0,0,0,.2);
-         text-shadow:0 1px 1px rgba(0,0,0,.3); cursor:pointer;
+         font-weight:700; font-size:13px;
+         border:2px solid rgba(0,0,0,.2); box-shadow:1px 1px 0 rgba(0,0,0,.15);
+         cursor:pointer;
          transition:opacity .25s, filter .25s, box-shadow .15s, transform .1s; z-index:1; }
-  .box:hover,.box:active { filter:brightness(1.15); transform:scale(1.06); z-index:10; }
-  .box.dimmed { opacity:.25; filter:grayscale(.85); pointer-events:none; transform:none !important; }
-  .box.highlighted { outline:3px solid var(--accent); outline-offset:1px;
-                     box-shadow:0 0 12px rgba(246,166,35,.6);
+  .box:hover,.box:active { filter:brightness(1.12); transform:scale(1.06); z-index:10; }
+  .box.dimmed { opacity:.22; filter:grayscale(.9); pointer-events:none; transform:none !important; }
+  .box.highlighted { outline:3px solid #333; outline-offset:1px;
+                     box-shadow:0 0 0 2px #fff, 0 0 12px rgba(0,0,0,.5);
                      z-index:8; animation:pulse 1.4s ease-in-out infinite; }
   @keyframes pulse {
-    0%,100%{ box-shadow:0 0 8px rgba(246,166,35,.5); outline-width:2px; }
-    50%    { box-shadow:0 0 18px rgba(246,166,35,.85); outline-width:4px; }
+    0%,100%{ outline-width:2px; box-shadow:0 0 0 2px #fff, 0 0 8px rgba(0,0,0,.4); }
+    50%    { outline-width:4px; box-shadow:0 0 0 3px #fff, 0 0 16px rgba(0,0,0,.6); }
   }
-  .orange{background:var(--orange);border-color:var(--orange-b);}
-  .blue  {background:var(--blue);  border-color:var(--blue-b);}
-  .teal  {background:var(--teal);  border-color:var(--teal-b);}
-  .purple{background:var(--purple);border-color:var(--purple-b);}
-  .navy  {background:var(--navy);  border-color:var(--navy-b);}
 
   .building { position:absolute; background:var(--gray); border:2px solid var(--gray-b);
               display:flex; align-items:center; justify-content:center;
