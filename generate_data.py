@@ -4,7 +4,7 @@ Ejecutar: python generate_data.py
 """
 import openpyxl, json, re, os
 
-EXCEL = "Distribución_de_carpas_31052026.xlsx"
+EXCEL = "Distribución_de_carpas_31052026 (1).xlsx"
 OUT   = "carpas_data.js"
 
 # Normalización de rubros: corrige typos del Excel
@@ -43,7 +43,7 @@ for row in rows[1:]:
 
     stand_num = row[1]
     rubro     = normalizar_rubro(str(row[2]).strip() if row[2] else "")
-    proyecto  = str(row[7]).strip() if row[7] else ""
+    proyecto  = str(row[5]).strip() if row[5] else ""
 
     if not proyecto:                       # fila sin proyecto, saltar
         continue

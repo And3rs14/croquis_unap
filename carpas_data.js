@@ -116,17 +116,17 @@ const carpasData = {
         "stand": 19,
         "proyecto": "Tuti paradise",
         "rubro": "Comida / Snack / Saludable"
+      },
+      {
+        "stand": 20,
+        "proyecto": "Proteina en polvo a base de soya",
+        "rubro": "Comida / Snack / Saludable"
       }
     ]
   },
   "C6": {
     "carpa": "C6",
     "stands": [
-      {
-        "stand": 20,
-        "proyecto": "Proteina en polvo a base de soya",
-        "rubro": "Comida / Snack / Saludable"
-      },
       {
         "stand": 21,
         "proyecto": "Iron Quinua",
@@ -136,12 +136,7 @@ const carpasData = {
         "stand": 22,
         "proyecto": "Keffir natural",
         "rubro": "Comida / Snack / Saludable"
-      }
-    ]
-  },
-  "C7": {
-    "carpa": "C7",
-    "stands": [
+      },
       {
         "stand": 23,
         "proyecto": "Gelysquama",
@@ -151,7 +146,12 @@ const carpasData = {
         "stand": 24,
         "proyecto": "emprendiendo derivados del cacao",
         "rubro": "Comida / Snack / Saludable"
-      },
+      }
+    ]
+  },
+  "C7": {
+    "carpa": "C7",
+    "stands": [
       {
         "stand": 25,
         "proyecto": "Yogurt de piña",
@@ -249,7 +249,7 @@ const carpasData = {
       },
       {
         "stand": 40,
-        "proyecto": "El nombre del proyecto es \"CHOCOLONG\", con el siguiente slogan \n\"Llega hasta la profundidad de tu alma\"",
+        "proyecto": "\"CHOCOLONG\"",
         "rubro": "Comida / Pastelería"
       }
     ]
@@ -489,7 +489,7 @@ const carpasData = {
       },
       {
         "stand": 76,
-        "proyecto": "- Muñequitos / objetos hechos a 3D (máquina)\n- Calabresas al Paso",
+        "proyecto": "Muñequitos / objetos hechos a 3D (máquina)/ Calabresas al Paso",
         "rubro": "Comida / Snack / Accesorios Decoración"
       }
     ]
@@ -529,7 +529,7 @@ const carpasData = {
       },
       {
         "stand": 82,
-        "proyecto": "Jade Natural Laboratory: Jaboneria Natural y Ungüentos analgésicos y antiinflamatorios a partir de especies vegetales amazónicas.",
+        "proyecto": "Jade Natural Laboratory",
         "rubro": "Cosmética / Cuidado personal"
       }
     ]
@@ -814,7 +814,7 @@ const carpasData = {
       },
       {
         "stand": 125,
-        "proyecto": "PROGRAMA DE BECAS  DE MOVILIDAD ESTUDIANTIL, DOCENTE Y ADMINISTRATIVO: \"OPORTUNIDAD DE ESTUDIOS A NIVEL NACIONAL E INTERNACIONAL\"",
+        "proyecto": "\"OPORTUNIDAD DE ESTUDIOS A NIVEL NACIONAL E INTERNACIONAL\"",
         "rubro": "Exposición / Bienestar social"
       }
     ]

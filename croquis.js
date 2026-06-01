@@ -234,6 +234,17 @@ modalEl.addEventListener("touchend",   function(e) {
   if (e.changedTouches[0].clientY - startY > 55) closeModal();
 }, { passive: true });
 
+// ── Modo mapa (lupa) ──────────────────────────────────────────────
+document.getElementById("lupa-btn").addEventListener("click", function() {
+  document.body.classList.add("map-mode");
+  closeResults();
+  input.blur();
+});
+document.getElementById("lupa-restore").addEventListener("click", function() {
+  document.body.classList.remove("map-mode");
+  fit();
+});
+
 // ── Escalar mapa ──────────────────────────────────────────────────
 var STAGE_W = 620, STAGE_H = 600;
 function fit() {
