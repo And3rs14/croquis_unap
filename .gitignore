@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Excel (datos fuente, no va al repo)
+*.xlsx
+
+# Archivos de trabajo
+carpas_data.json
+extract_carpas.py
+generate_html.py
+
+# OS
+.DS_Store
+Thumbs.db

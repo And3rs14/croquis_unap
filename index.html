@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Croquis - Feria UNAP</title>
+<style>
+  :root {
+    --bg:#bfe9ef; --frame:#0a0a0a;
+    --gray:#c9cccd; --gray-b:#9aa0a1;
+    --green:#dff0b9; --green-b:#b8d27a;
+    --orange:#f6a623; --orange-b:#d98a16;
+    --blue:#7596e6;   --blue-b:#3a5fcc;
+    --teal:#11504e;   --teal-b:#0a3433;
+    --purple:#6a3b8f; --purple-b:#4a2766;
+    --navy:#0f2a78;   --navy-b:#081a52;
+    --red:#ee2b2b;    --red-b:#c11d1d;
+    --street:#7e8e8e;
+    --dark:#1b2526; --panel:#243031; --accent:#f6a623;
+  }
+  *, *::before, *::after { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  html,body { margin:0; padding:0; }
+  body { background:var(--dark); font-family:"Segoe UI",Tahoma,Arial,sans-serif;
+         display:flex; flex-direction:column; align-items:center; min-height:100vh; }
+
+  /* BUSCADOR */
+  #search-bar { width:100%; max-width:660px; padding:10px 14px 0;
+                position:sticky; top:0; z-index:200; background:var(--dark); }
+  #search-container { position:relative; }
+  #search-wrap { display:flex; align-items:center; gap:8px; background:var(--panel);
+                 padding:0 14px; border:2px solid transparent;
+                 transition:border-color .2s; position:relative; z-index:1; }
+  #search-wrap.active { border-color:var(--accent); }
+  .search-ico { font-size:17px; flex-shrink:0; opacity:.5; user-select:none; }
+  #search-input { flex:1; background:none; border:none; outline:none; color:#fff;
+                  font-size:16px; padding:12px 0; min-width:0; }
+  #search-input::placeholder { color:rgba(255,255,255,.3); }
+  #search-clear { display:none; background:rgba(255,255,255,.12); border:none;
+                  color:#fff; width:26px; height:26px;
+                  font-size:14px; cursor:pointer; flex-shrink:0;
+                  align-items:center; justify-content:center; }
+  #search-clear.visible { display:flex; }
+  #search-clear:active { background:rgba(255,255,255,.22); }
+
+  /* dropdown FLOTANTE */
+  #results-list { display:none; background:var(--panel);
+                  border:2px solid var(--accent); border-top:none;
+                  max-height:55vh; overflow-y:auto;
+                  overscroll-behavior:contain; -webkit-overflow-scrolling:touch;
+                  position:absolute; top:100%; left:0; right:0; z-index:400;
+                  box-shadow:0 6px 20px rgba(0,0,0,.5); }
+  #results-list.open { display:block; }
+  .result-item { display:flex; align-items:center; gap:10px; padding:11px 14px;
+                 border-bottom:1px solid rgba(255,255,255,.06); cursor:pointer; }
+  .result-item:last-child { border-bottom:none; }
+  .result-item:active { background:rgba(246,166,35,.1); }
+  .result-carpa { flex-shrink:0; background:var(--navy); color:#fff;
+                  padding:3px 8px; font-size:11px; font-weight:700; }
+  .result-info { flex:1; min-width:0; }
+  .result-nombre { font-size:14px; font-weight:600; color:#fff; line-height:1.25;
+                   white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .result-rubro { display:inline-block; margin-top:3px; font-size:11px; font-weight:600;
+                  background:rgba(246,166,35,.15); color:var(--accent);
+                  padding:1px 7px; border-left:2px solid var(--accent); }
+  .result-arrow { color:rgba(255,255,255,.2); font-size:16px; flex-shrink:0; }
+  .no-results { padding:18px 14px; text-align:center; color:rgba(255,255,255,.35); font-size:14px; }
+  mark { background:rgba(246,166,35,.45); color:#fff; font-weight:700; padding:0 1px; }
+
+  #search-info { font-size:12px; color:rgba(255,255,255,.4);
+                 padding:6px 2px 8px; min-height:30px; transition:color .2s; }
+  #search-info.found { color:#7de0a4; }
+  #search-info.none  { color:#e07d7d; }
+
+  /* ENCABEZADO */
+  #header { width:100%; max-width:660px; padding:14px 18px 6px;
+            display:flex; align-items:center; gap:12px;
+            border-bottom:1px solid rgba(255,255,255,.07); }
+  #header-text h1 { margin:0; font-size:16px; font-weight:700; color:#fff;
+                    letter-spacing:.3px; line-height:1.2; }
+  #header-text p  { margin:3px 0 0; font-size:11.5px; color:rgba(255,255,255,.4); }
+
+  /* LEYENDA */
+  #legend { width:100%; max-width:660px; padding:8px 14px 2px;
+            display:flex; gap:5px; overflow-x:auto;
+            -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+  #legend::-webkit-scrollbar { display:none; }
+  .lg { display:flex; align-items:center; gap:5px;
+        background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1);
+        padding:4px 10px; white-space:nowrap; flex-shrink:0;
+        font-size:11px; color:rgba(255,255,255,.65); font-weight:500; }
+  .lg-dot { width:10px; height:10px; flex-shrink:0; }
+
+  /* MAPA */
+  #wrap   { width:100%; max-width:660px; padding:0 14px 24px; }
+  #scaler { position:relative; width:100%; }
+  #stage  { position:absolute; top:0; left:0; width:620px; height:600px;
+            transform-origin:top left; background:var(--bg);
+            border:7px solid var(--frame); overflow:hidden; }
+
+  .box { position:absolute; display:flex; align-items:center; justify-content:center;
+         font-weight:700; font-size:13px; color:#fff;
+         border:2px solid rgba(0,0,0,.2); box-shadow:1px 1px 0 rgba(0,0,0,.2);
+         text-shadow:0 1px 1px rgba(0,0,0,.3); cursor:pointer;
+         transition:opacity .25s, filter .25s, box-shadow .15s, transform .1s; z-index:1; }
+  .box:hover,.box:active { filter:brightness(1.15); transform:scale(1.06); z-index:10; }
+  .box.dimmed { opacity:.25; filter:grayscale(.85); pointer-events:none; transform:none !important; }
+  .box.highlighted { outline:3px solid var(--accent); outline-offset:1px;
+                     box-shadow:0 0 12px rgba(246,166,35,.6);
+                     z-index:8; animation:pulse 1.4s ease-in-out infinite; }
+  @keyframes pulse {
+    0%,100%{ box-shadow:0 0 8px rgba(246,166,35,.5); outline-width:2px; }
+    50%    { box-shadow:0 0 18px rgba(246,166,35,.85); outline-width:4px; }
+  }
+  .orange{background:var(--orange);border-color:var(--orange-b);}
+  .blue  {background:var(--blue);  border-color:var(--blue-b);}
+  .teal  {background:var(--teal);  border-color:var(--teal-b);}
+  .purple{background:var(--purple);border-color:var(--purple-b);}
+  .navy  {background:var(--navy);  border-color:var(--navy-b);}
+
+  .building { position:absolute; background:var(--gray); border:2px solid var(--gray-b);
+              display:flex; align-items:center; justify-content:center;
+              text-align:center; color:#3a3f40; font-weight:600; font-size:14px;
+              line-height:1.15; padding:4px; }
+  #aula { font-size:15px; }
+  #plaza { position:absolute; background:var(--green); border:2px solid var(--green-b); }
+  #plaza .ptxt { position:absolute; right:6px; top:36px; width:46px; text-align:center;
+                 font-weight:600; font-size:12.5px; color:#3a3f40; line-height:1.15; }
+  .street   { position:absolute; color:var(--street); font-size:22px; font-weight:600; }
+  .street-v { position:absolute; color:var(--street); font-size:24px; font-weight:700;
+              letter-spacing:2px; white-space:nowrap;
+              transform:translate(-50%,-50%) rotate(-90deg); transform-origin:center; }
+  .red-rect { position:absolute; background:var(--red); border:1px solid var(--red-b);
+              display:flex; align-items:center; justify-content:center;
+              color:#fff; font-weight:700; font-size:15px; text-shadow:0 1px 1px rgba(0,0,0,.3); }
+  #estrada  { position:absolute; left:45px; top:512px; width:122px; height:60px;
+              background:var(--red); border:1px solid var(--red-b);
+              border-radius:120px 120px 0 0;
+              display:flex; align-items:flex-end; justify-content:center; padding-bottom:6px;
+              color:#fff; font-weight:700; font-size:15px; text-shadow:0 1px 1px rgba(0,0,0,.3); }
+  #seal { position:absolute; left:14px; top:10px; width:118px; height:112px; object-fit:contain; }
+
+  /* MODAL */
+  #modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,.6);
+                   z-index:1000; align-items:flex-end; justify-content:center; }
+  #modal-overlay.open { display:flex; }
+  #modal { background:#fff; width:100%; max-width:520px;
+           max-height:72vh; overflow-y:auto; box-shadow:0 -2px 20px rgba(0,0,0,.4);
+           animation:slideup .2s ease-out; padding-bottom:env(safe-area-inset-bottom,0px); }
+  @keyframes slideup { from{transform:translateY(100%)} to{transform:translateY(0)} }
+  #modal-handle { width:36px; height:3px; background:#ccc; margin:10px auto 0; }
+  #modal-header { display:flex; align-items:center; justify-content:space-between;
+                  padding:12px 20px 10px; border-bottom:2px solid #eee; }
+  #modal-title   { font-size:18px; font-weight:700; color:var(--navy); margin:0; }
+  #modal-subtitle{ font-size:12px; color:#aaa; margin:2px 0 0; }
+  #modal-close { background:#eee; border:none; width:28px; height:28px;
+                 font-size:16px; cursor:pointer; color:#555;
+                 display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  #modal-body { padding:10px 20px 20px; }
+  .proyecto-item { display:flex; align-items:flex-start; gap:12px;
+                   padding:11px 0; border-bottom:1px solid #ececec; }
+  .proyecto-item:last-child { border-bottom:none; padding-bottom:0; }
+  .proyecto-num  { flex-shrink:0; width:26px; height:26px; background:var(--navy);
+                   color:#fff; font-size:12px; font-weight:700;
+                   display:flex; align-items:center; justify-content:center; margin-top:1px; }
+  .proyecto-nombre{ font-size:15px; font-weight:600; color:#1a1a1a; line-height:1.3; }
+  .proyecto-rubro { display:inline-block; margin-top:4px; font-size:11px; font-weight:600;
+                    background:#fff8e1; color:#7a5c00;
+                    border-left:3px solid #f6a623; padding:1px 8px; }
+</style>
+</head>
+<body>
+
+<div id="header">
+  <div id="header-text">
+    <h1>Feria de Emprendimiento UNAP</h1>
+    <p>3 de junio del 2026 &nbsp;·&nbsp; Toca una carpa para ver su contenido</p>
+  </div>
+</div>
+
+<div id="legend">
+  <div class="lg"><span class="lg-dot" style="background:#f6a623;"></span>Comida &amp; Bebidas</div>
+  <div class="lg"><span class="lg-dot" style="background:#11504e;"></span>Cosmética &amp; Accesorios</div>
+  <div class="lg"><span class="lg-dot" style="background:#7596e6;"></span>Exposición &amp; Entidades</div>
+  <div class="lg"><span class="lg-dot" style="background:#6a3b8f;"></span>Productos &amp; Hogar</div>
+  <div class="lg"><span class="lg-dot" style="background:#0f2a78;"></span>Salud</div>
+</div>
+
+<div id="search-bar">
+  <div id="search-container">
+    <div id="search-wrap">
+      <span class="search-ico">&#128269;</span>
+      <input id="search-input" type="search" inputmode="search"
+             placeholder="Buscar proyecto o rubro&hellip;"
+             autocomplete="off" autocorrect="off" spellcheck="false">
+      <button id="search-clear" aria-label="Limpiar">&#10005;</button>
+    </div>
+    <div id="results-list"></div>
+  </div>
+  <div id="search-info"></div>
+</div>
+
+<div id="wrap">
+  <div id="scaler">
+    <div id="stage">
+      <div class="street" style="left:50%;top:8px;transform:translateX(-50%);">C. Nanay</div>
+      <div class="street" style="left:50%;bottom:8px;transform:translateX(-50%);">C. Samanez Ocampo</div>
+      <div class="street-v" style="left:108px;top:330px;">Nauta</div>
+      <div class="street-v" style="left:408px;top:300px;">Pevas</div>
+      <img id="seal" src="Isotipo-UNAP.png" alt="UNAP">
+      <div class="building" id="aula" style="left:192px;top:42px;width:98px;height:368px;">Aula Magna de la UNAP</div>
+      <div class="building" style="left:518px;top:42px;width:92px;height:118px;">Laboratorio UNAP</div>
+      <div class="building" style="left:518px;top:208px;width:92px;height:82px;">FISI</div>
+      <div class="building" style="left:518px;top:303px;width:92px;height:30px;"></div>
+      <div class="building" style="left:518px;top:343px;width:92px;height:30px;"></div>
+      <div class="building" style="left:518px;top:406px;width:92px;height:134px;">FACEN</div>
+      <div id="plaza" style="left:193px;top:415px;width:98px;height:108px;">
+        <div class="ptxt">Plaza Serafin</div>
+      </div>
+      <div id="estrada">Entrada</div>
+      <div class="red-rect" style="left:368px;top:528px;width:88px;height:30px;">Estrado</div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-overlay">
+  <div id="modal">
+    <div id="modal-handle"></div>
+    <div id="modal-header">
+      <div>
+        <p id="modal-title"></p>
+        <p id="modal-subtitle"></p>
+      </div>
+      <button id="modal-close">&#10005;</button>
+    </div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script src="carpas_data.js"></script>
+<script src="croquis.js"></script>
+</body>
+</html>
