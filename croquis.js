@@ -245,11 +245,15 @@ document.getElementById("lupa-restore").addEventListener("click", function() {
   fit();
 });
 
-// ── Escalar mapa ──────────────────────────────────────────────────
+// ── Escalar mapa (ajusta por ancho Y alto disponible) ─────────────
 var STAGE_W = 620, STAGE_H = 600;
 function fit() {
-  var sc = document.getElementById("scaler");
-  var s  = sc.clientWidth / STAGE_W;
+  var sc     = document.getElementById("scaler");
+  var availW = sc.clientWidth;
+  // Alto disponible = desde la parte superior del scaler hasta el borde de la pantalla
+  var top    = sc.getBoundingClientRect().top;
+  var availH = (window.innerHeight || document.documentElement.clientHeight) - top - 2;
+  var s = Math.min(availW / STAGE_W, availH / STAGE_H);
   stage.style.transform = "scale(" + s + ")";
   sc.style.height = (STAGE_H * s) + "px";
 }

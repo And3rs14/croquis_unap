@@ -19,9 +19,10 @@
     --dark:#1b2526; --panel:#243031; --accent:#f6a623;
   }
   *, *::before, *::after { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-  html,body { margin:0; padding:0; }
+  html,body { margin:0; padding:0; height:100%; }
   body { background:var(--dark); font-family:"Segoe UI",Tahoma,Arial,sans-serif;
-         display:flex; flex-direction:column; align-items:center; min-height:100vh; }
+         display:flex; flex-direction:column; align-items:center;
+         height:100dvh; overflow:hidden; }
 
   /* BUSCADOR */
   #search-bar { width:100%; max-width:660px; padding:10px 14px 0;
@@ -85,7 +86,8 @@
   mark { background:rgba(246,166,35,.45); color:#fff; font-weight:700; padding:0 1px; }
 
   #search-info { font-size:12px; color:rgba(255,255,255,.4);
-                 padding:6px 2px 8px; min-height:30px; transition:color .2s; }
+                 padding:3px 2px 4px; transition:color .2s; }
+  #search-info:empty { display:none; }
   #search-info.found { color:#7de0a4; }
   #search-info.none  { color:#e07d7d; }
 
@@ -109,8 +111,8 @@
   .lg-dot { width:10px; height:10px; flex-shrink:0; }
 
   /* MAPA */
-  #wrap   { width:100%; max-width:660px; padding:0 14px 24px; }
-  #scaler { position:relative; width:100%; }
+  #wrap   { width:100%; max-width:660px; padding:0 14px 2px; flex:1; min-height:0; }
+  #scaler { position:relative; width:100%; height:100%; }
   #stage  { position:absolute; top:0; left:0; width:620px; height:600px;
             transform-origin:top left; background:var(--bg);
             border:7px solid var(--frame); overflow:hidden; }
