@@ -179,16 +179,21 @@ const carpasData = {
     "stands": [
       {
         "stand": 29,
-        "proyecto": "Miluas Choc (chocotejas)",
+        "proyecto": "Venta de postres",
         "rubro": "Comida / Pastelería"
       },
       {
         "stand": 30,
-        "proyecto": "Chocosel",
+        "proyecto": "Miluas Choc (chocotejas)",
         "rubro": "Comida / Pastelería"
       },
       {
         "stand": 31,
+        "proyecto": "Chocosel",
+        "rubro": "Comida / Pastelería"
+      },
+      {
+        "stand": 32,
         "proyecto": "Yura muru",
         "rubro": "Comida / Pastelería"
       }
@@ -198,17 +203,17 @@ const carpasData = {
     "carpa": "C9",
     "stands": [
       {
-        "stand": 32,
+        "stand": 33,
         "proyecto": "Amazonian fruits cakes",
         "rubro": "Comida / Pastelería"
       },
       {
-        "stand": 33,
+        "stand": 34,
         "proyecto": "Panadería y pastelería Artesanal DOLCE MOCHI",
         "rubro": "Comida / Pastelería"
       },
       {
-        "stand": 34,
+        "stand": 35,
         "proyecto": "Dulces Postrecitos",
         "rubro": "Comida / Pastelería"
       }
@@ -218,17 +223,17 @@ const carpasData = {
     "carpa": "C10",
     "stands": [
       {
-        "stand": 35,
+        "stand": 36,
         "proyecto": "Panadería y pastelería artesanal (Buffet)",
         "rubro": "Comida / Pastelería"
       },
       {
-        "stand": 36,
+        "stand": 37,
         "proyecto": "Sweet ‘n Choco",
         "rubro": "Comida / Pastelería"
       },
       {
-        "stand": 37,
+        "stand": 38,
         "proyecto": "Econo Cake",
         "rubro": "Comida / Pastelería"
       }
@@ -238,17 +243,17 @@ const carpasData = {
     "carpa": "C11",
     "stands": [
       {
-        "stand": 38,
+        "stand": 39,
         "proyecto": "Lili Cake",
         "rubro": "Comida / Pastelería"
       },
       {
-        "stand": 39,
+        "stand": 40,
         "proyecto": "Violeta’s",
         "rubro": "Comida / Pastelería"
       },
       {
-        "stand": 40,
+        "stand": 41,
         "proyecto": "\"CHOCOLONG\"",
         "rubro": "Comida / Pastelería"
       }
@@ -258,17 +263,17 @@ const carpasData = {
     "carpa": "C12",
     "stands": [
       {
-        "stand": 41,
+        "stand": 42,
         "proyecto": "ANYFAR POSTRES",
         "rubro": "Comida / Pastelería"
       },
       {
-        "stand": 42,
+        "stand": 43,
         "proyecto": "Mooncake",
         "rubro": "Comida / Pastelería"
       },
       {
-        "stand": 43,
+        "stand": 44,
         "proyecto": "“Masitas” minipancakes",
         "rubro": "Comida / Pastelería"
       }
@@ -278,17 +283,17 @@ const carpasData = {
     "carpa": "C13",
     "stands": [
       {
-        "stand": 44,
+        "stand": 45,
         "proyecto": "Pan de Mussa Paradisiaca",
         "rubro": "Comida / Pastelería"
       },
       {
-        "stand": 45,
+        "stand": 46,
         "proyecto": "Criving dulces",
         "rubro": "Comida / Pastelería"
       },
       {
-        "stand": 46,
+        "stand": 47,
         "proyecto": "Canasta bellaca con salsa de la selva su chorizo.",
         "rubro": "Comida / Snack"
       }
@@ -298,17 +303,17 @@ const carpasData = {
     "carpa": "C14",
     "stands": [
       {
-        "stand": 47,
+        "stand": 48,
         "proyecto": "Papaboom",
         "rubro": "Comida / Snack"
       },
       {
-        "stand": 48,
+        "stand": 49,
         "proyecto": "Carmen Pizzas",
         "rubro": "Comida / Snack"
       },
       {
-        "stand": 49,
+        "stand": 50,
         "proyecto": "Productos E & M",
         "rubro": "Comida / Snack"
       }
@@ -318,17 +323,17 @@ const carpasData = {
     "carpa": "C15",
     "stands": [
       {
-        "stand": 50,
+        "stand": 51,
         "proyecto": "Fuego Wings(venta de alitas)",
         "rubro": "Comida / Snack"
       },
       {
-        "stand": 51,
+        "stand": 52,
         "proyecto": "Canastas amazónicas y danzas regionales",
         "rubro": "Comida / Snack"
       },
       {
-        "stand": 52,
+        "stand": 53,
         "proyecto": "TAKA RAPIS",
         "rubro": "Comida / Snack"
       }
@@ -338,17 +343,17 @@ const carpasData = {
     "carpa": "C16",
     "stands": [
       {
-        "stand": 53,
+        "stand": 54,
         "proyecto": "El gustito de la mañana",
         "rubro": "Comida / Snack"
       },
       {
-        "stand": 54,
+        "stand": 55,
         "proyecto": "Agroindustria Luvisam",
         "rubro": "Comida / Snack"
       },
       {
-        "stand": 55,
+        "stand": 56,
         "proyecto": "Pan con hot dog parrillero y refresco maracuya",
         "rubro": "Comida / Snack"
       }
@@ -358,17 +363,17 @@ const carpasData = {
     "carpa": "C17",
     "stands": [
       {
-        "stand": 56,
+        "stand": 57,
         "proyecto": "Crazy snaks",
         "rubro": "Comida / Snack"
       },
       {
-        "stand": 57,
+        "stand": 58,
         "proyecto": "Tequeños el vago",
         "rubro": "Comida / Snack"
       },
       {
-        "stand": 58,
+        "stand": 59,
         "proyecto": "Poin Maki - venta de makis a domicilio.",
         "rubro": "Comida / Snack"
       }
@@ -378,17 +383,17 @@ const carpasData = {
     "carpa": "C18",
     "stands": [
       {
-        "stand": 59,
+        "stand": 60,
         "proyecto": "Empanadictos",
         "rubro": "Comida / Snack"
       },
       {
-        "stand": 60,
+        "stand": 61,
         "proyecto": "Empanadas de harina",
         "rubro": "Comida / Snack"
       },
       {
-        "stand": 61,
+        "stand": 62,
         "proyecto": "Empanadas artesanales",
         "rubro": "Comida / Snack"
       }
@@ -398,17 +403,17 @@ const carpasData = {
     "carpa": "C19",
     "stands": [
       {
-        "stand": 62,
+        "stand": 63,
         "proyecto": "Antojitos S&G",
         "rubro": "Comida / Snack"
       },
       {
-        "stand": 63,
+        "stand": 64,
         "proyecto": "Chanchitos la 18",
         "rubro": "Comida / Snack"
       },
       {
-        "stand": 64,
+        "stand": 65,
         "proyecto": "Selva Viva",
         "rubro": "Comida / Snack"
       }
@@ -418,17 +423,17 @@ const carpasData = {
     "carpa": "C20",
     "stands": [
       {
-        "stand": 65,
+        "stand": 66,
         "proyecto": "Charapa Crunch",
         "rubro": "Comida / Platos"
       },
       {
-        "stand": 66,
+        "stand": 67,
         "proyecto": "Cocina Brava",
         "rubro": "Comida / Platos"
       },
       {
-        "stand": 67,
+        "stand": 68,
         "proyecto": "COCINA Y SERVICIOS GASTRONOMICOS",
         "rubro": "Comida / Platos"
       }
@@ -438,17 +443,17 @@ const carpasData = {
     "carpa": "C21",
     "stands": [
       {
-        "stand": 68,
+        "stand": 69,
         "proyecto": "Ceviche de Pota",
         "rubro": "Comida / Platos"
       },
       {
-        "stand": 69,
+        "stand": 70,
         "proyecto": "CEVICHE AMAZÓNICO",
         "rubro": "Comida / Platos"
       },
       {
-        "stand": 70,
+        "stand": 71,
         "proyecto": "COCOFISH/PLATOS MARINOS",
         "rubro": "Comida / Platos"
       }
@@ -458,17 +463,17 @@ const carpasData = {
     "carpa": "C22",
     "stands": [
       {
-        "stand": 71,
+        "stand": 72,
         "proyecto": "Causita Mia",
         "rubro": "Comida / Platos"
       },
       {
-        "stand": 72,
+        "stand": 73,
         "proyecto": "KAHYA BAMBÚ SAC",
         "rubro": "Comida / Productos"
       },
       {
-        "stand": 73,
+        "stand": 74,
         "proyecto": "Chapauni Sabor Loretano",
         "rubro": "Comida / Productos"
       }
@@ -478,17 +483,17 @@ const carpasData = {
     "carpa": "C23",
     "stands": [
       {
-        "stand": 74,
+        "stand": 75,
         "proyecto": "Tahuampa: Licores Amazónicos",
         "rubro": "Comida / Productos"
       },
       {
-        "stand": 75,
+        "stand": 76,
         "proyecto": "Amazon Natura Loret",
         "rubro": "Comida / Productos"
       },
       {
-        "stand": 76,
+        "stand": 77,
         "proyecto": "Muñequitos / objetos hechos a 3D (máquina)/ Calabresas al Paso",
         "rubro": "Comida / Snack / Accesorios Decoración"
       }
@@ -498,17 +503,17 @@ const carpasData = {
     "carpa": "C24",
     "stands": [
       {
-        "stand": 77,
+        "stand": 78,
         "proyecto": "Cupido Diseños",
         "rubro": "Accesorios / Decoración / Comida / Pastelería"
       },
       {
-        "stand": 78,
+        "stand": 79,
         "proyecto": "BELLISIMA",
         "rubro": "Vestimenta"
       },
       {
-        "stand": 79,
+        "stand": 80,
         "proyecto": "Brizy",
         "rubro": "Cosmética / Cuidado personal"
       }
@@ -518,17 +523,17 @@ const carpasData = {
     "carpa": "C25",
     "stands": [
       {
-        "stand": 80,
+        "stand": 81,
         "proyecto": "Jabón Artesanal",
         "rubro": "Cosmética / Cuidado personal"
       },
       {
-        "stand": 81,
+        "stand": 82,
         "proyecto": "Sabooné",
         "rubro": "Cosmética / Cuidado personal"
       },
       {
-        "stand": 82,
+        "stand": 83,
         "proyecto": "Jade Natural Laboratory",
         "rubro": "Cosmética / Cuidado personal"
       }
@@ -538,22 +543,22 @@ const carpasData = {
     "carpa": "C26",
     "stands": [
       {
-        "stand": 83,
+        "stand": 84,
         "proyecto": "Elaboracion de jabones con aceite de cocina usado",
         "rubro": "Cosmética / Cuidado personal"
       },
       {
-        "stand": 84,
+        "stand": 85,
         "proyecto": "Jabones a base de aceite usado",
         "rubro": "Cosmética / Cuidado personal"
       },
       {
-        "stand": 85,
+        "stand": 86,
         "proyecto": "Planta de valorización de aceite de cocina usado",
         "rubro": "Cosmética / Cuidado personal"
       },
       {
-        "stand": 86,
+        "stand": 87,
         "proyecto": "Uso del Aceite Usado, para la elaboración de jabones",
         "rubro": "Cosmética / Cuidado personal"
       }
@@ -563,23 +568,18 @@ const carpasData = {
     "carpa": "C27",
     "stands": [
       {
-        "stand": 87,
+        "stand": 88,
         "proyecto": "PERFUMES SÓLIDOS FLEURIE",
         "rubro": "Cosmética / Perfumería"
       },
       {
-        "stand": 88,
+        "stand": 89,
         "proyecto": "“The Supy”",
         "rubro": "Cosmética / Perfumería"
       },
       {
-        "stand": 89,
-        "proyecto": "Lunaria accesorios",
-        "rubro": "Accesorios / Bisutería"
-      },
-      {
         "stand": 90,
-        "proyecto": "Lissa.accesorios",
+        "proyecto": "Lunaria accesorios",
         "rubro": "Accesorios / Bisutería"
       }
     ]
@@ -589,22 +589,17 @@ const carpasData = {
     "stands": [
       {
         "stand": 91,
-        "proyecto": "Accesorios Misi-Iquitos",
+        "proyecto": "Lissa.accesorios",
         "rubro": "Accesorios / Bisutería"
       },
       {
         "stand": 92,
-        "proyecto": "Aniyeli Style",
+        "proyecto": "Accesorios Misi-Iquitos",
         "rubro": "Accesorios / Bisutería"
       },
       {
         "stand": 93,
-        "proyecto": "Dulce Regalo",
-        "rubro": "Accesorios / Bisutería"
-      },
-      {
-        "stand": 94,
-        "proyecto": "Misk'i accesorios",
+        "proyecto": "Aniyeli Style",
         "rubro": "Accesorios / Bisutería"
       }
     ]
@@ -613,19 +608,19 @@ const carpasData = {
     "carpa": "C29",
     "stands": [
       {
-        "stand": 95,
+        "stand": 94,
         "proyecto": "Dulce Regalo",
+        "rubro": "Accesorios / Bisutería"
+      },
+      {
+        "stand": 95,
+        "proyecto": "VELVET",
         "rubro": "Accesorios / Bisutería"
       },
       {
         "stand": 96,
         "proyecto": "Misk'i accesorios",
         "rubro": "Accesorios / Bisutería"
-      },
-      {
-        "stand": 97,
-        "proyecto": "Misk'i",
-        "rubro": "Accesorios / Decoración"
       }
     ]
   },
@@ -633,17 +628,17 @@ const carpasData = {
     "carpa": "C30",
     "stands": [
       {
-        "stand": 98,
+        "stand": 97,
         "proyecto": "Hecho a Mano Dorelly's",
         "rubro": "Accesorios / Decoración"
       },
       {
-        "stand": 99,
+        "stand": 98,
         "proyecto": "Jhoxy Accesorios",
         "rubro": "Accesorios / Decoración"
       },
       {
-        "stand": 100,
+        "stand": 99,
         "proyecto": "Aura’s Crochet",
         "rubro": "Accesorios / Decoración"
       }
@@ -653,17 +648,17 @@ const carpasData = {
     "carpa": "C31",
     "stands": [
       {
-        "stand": 101,
+        "stand": 100,
         "proyecto": "Claré detalles y flores",
         "rubro": "Accesorios / Decoración"
       },
       {
-        "stand": 102,
+        "stand": 101,
         "proyecto": "Creaciones Lollote",
         "rubro": "Accesorios / Decoración"
       },
       {
-        "stand": 103,
+        "stand": 102,
         "proyecto": "\"Carni-piranha\" y \"Carni-gurumis\"",
         "rubro": "Accesocios / Tejidos , Hogar / Jardinería"
       }
@@ -673,12 +668,12 @@ const carpasData = {
     "carpa": "C32",
     "stands": [
       {
-        "stand": 104,
+        "stand": 103,
         "proyecto": "Feria de salud integral y nutrición",
         "rubro": "Salud / Descarte de enfermedades"
       },
       {
-        "stand": 105,
+        "stand": 104,
         "proyecto": "Zona de Prevención CEIM: Chequeo de Salud y Diagnóstico Preventivo",
         "rubro": "Salud / Triaje básico"
       }
@@ -688,7 +683,7 @@ const carpasData = {
     "carpa": "C33",
     "stands": [
       {
-        "stand": 106,
+        "stand": 105,
         "proyecto": "Centro Obstértrico",
         "rubro": "Salud / Centro Obstértrico"
       }
@@ -698,17 +693,17 @@ const carpasData = {
     "carpa": "C34",
     "stands": [
       {
-        "stand": 107,
+        "stand": 106,
         "proyecto": "Moonginger",
         "rubro": "Accesorios / Tejidos"
       },
       {
-        "stand": 108,
+        "stand": 107,
         "proyecto": "Productos variados",
         "rubro": "Hogar / Decoración"
       },
       {
-        "stand": 109,
+        "stand": 108,
         "proyecto": "Encanto Amazónico'\n\"Artesanías y Manías\"",
         "rubro": "Hogar / Decoración"
       }
@@ -718,17 +713,17 @@ const carpasData = {
     "carpa": "C35",
     "stands": [
       {
-        "stand": 110,
+        "stand": 109,
         "proyecto": "Nuevo Tratamiento de agua para consumo humano alkalina y ozonizada.",
         "rubro": "Hogar / Construcción"
       },
       {
-        "stand": 111,
+        "stand": 110,
         "proyecto": "EcoRiver Promoviendo la innovación, la sostenibilidad y el desarrollo amazónico.”",
         "rubro": "Exposición / Medio ambiente"
       },
       {
-        "stand": 112,
+        "stand": 111,
         "proyecto": "Ecoriver",
         "rubro": "Exposición / Medio ambiente"
       }
@@ -738,22 +733,22 @@ const carpasData = {
     "carpa": "C36",
     "stands": [
       {
+        "stand": 112,
+        "proyecto": "Proyecto de hortalizas",
+        "rubro": "Productos crudos"
+      },
+      {
         "stand": 113,
         "proyecto": "Proyecto de hortalizas",
         "rubro": "Productos crudos"
       },
       {
         "stand": 114,
-        "proyecto": "Proyecto de hortalizas",
-        "rubro": "Productos crudos"
-      },
-      {
-        "stand": 115,
         "proyecto": "Cecina",
         "rubro": "Productos crudos"
       },
       {
-        "stand": 116,
+        "stand": 115,
         "proyecto": "Paté",
         "rubro": "Productos crudos"
       }
@@ -763,14 +758,19 @@ const carpasData = {
     "carpa": "C37",
     "stands": [
       {
-        "stand": 117,
+        "stand": 116,
         "proyecto": "Negocio circular a través de materiales reciclados.",
         "rubro": "Exposición / Medio ambiente"
       },
       {
-        "stand": 118,
+        "stand": 117,
         "proyecto": "Es una lucha frontal Contra la contaminación por plástico.",
         "rubro": "Exposición / Medio ambiente"
+      },
+      {
+        "stand": 118,
+        "proyecto": "DevCloud",
+        "rubro": "Exposición / Empresa"
       }
     ]
   },
@@ -799,22 +799,12 @@ const carpasData = {
     "stands": [
       {
         "stand": 122,
-        "proyecto": "VRAC",
-        "rubro": "Exposición / Oficinas UNAP"
+        "proyecto": "Club de Leones de Punchana",
+        "rubro": "Exposición / Bienestar social"
       },
       {
         "stand": 123,
-        "proyecto": "Dirección de Seguimiento y Apoyo al Graduado (DISAG)",
-        "rubro": "Exposición / Oficinas UNAP"
-      },
-      {
-        "stand": 124,
-        "proyecto": "Voluntariado UNAP",
-        "rubro": "Exposición / Oficinas UNAP"
-      },
-      {
-        "stand": 125,
-        "proyecto": "\"OPORTUNIDAD DE ESTUDIOS A NIVEL NACIONAL E INTERNACIONAL\"",
+        "proyecto": "Producción de Peces Nativos Amazonicos y Compost de Mosca Negra.",
         "rubro": "Exposición / Bienestar social"
       }
     ]
@@ -823,14 +813,9 @@ const carpasData = {
     "carpa": "C40",
     "stands": [
       {
-        "stand": 126,
-        "proyecto": "Club de Leones de Punchana",
+        "stand": 124,
+        "proyecto": "Si hay chamba / Dirección Regional del trabajo",
         "rubro": "Exposición / Bienestar social"
-      },
-      {
-        "stand": 127,
-        "proyecto": "Producción de Peces Nativos Amazonicos y Compost de Mosca Negra.",
-        "rubro": ""
       }
     ]
   },
@@ -838,8 +823,8 @@ const carpasData = {
     "carpa": "C41",
     "stands": [
       {
-        "stand": 128,
-        "proyecto": "Si hay chamba / Dirección Regional del trabajo",
+        "stand": 125,
+        "proyecto": "Empresas de la región",
         "rubro": "Exposición / Bienestar social"
       }
     ]
@@ -848,8 +833,23 @@ const carpasData = {
     "carpa": "C42",
     "stands": [
       {
+        "stand": 126,
+        "proyecto": "VRAC",
+        "rubro": "Exposición / Oficinas UNAP"
+      },
+      {
+        "stand": 127,
+        "proyecto": "Dirección de Seguimiento y Apoyo al Graduado (DISAG)",
+        "rubro": "Exposición / Oficinas UNAP"
+      },
+      {
+        "stand": 128,
+        "proyecto": "Voluntariado UNAP",
+        "rubro": "Exposición / Oficinas UNAP"
+      },
+      {
         "stand": 129,
-        "proyecto": "Empresas de la región",
+        "proyecto": "\"OPORTUNIDAD DE ESTUDIOS A NIVEL NACIONAL E INTERNACIONAL\"",
         "rubro": "Exposición / Bienestar social"
       }
     ]

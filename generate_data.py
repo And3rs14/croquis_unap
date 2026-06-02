@@ -4,7 +4,7 @@ Ejecutar: python generate_data.py
 """
 import openpyxl, json, re, os
 
-EXCEL = "Distribución_de_carpas_31052026 (2).xlsx"
+EXCEL = "Distribución_de_carpas_02062026.xlsx"
 OUT   = "carpas_data.js"
 
 # Normalización de rubros: corrige typos del Excel
@@ -16,6 +16,7 @@ RUBRO_MAP = {
     "Comida / Porductos":                            "Comida / Productos",
     "Comida / Comida":                               "Comida / Platos",
     "Exposición / Entre del Estado":                 "Exposición / Ente del Estado",
+    "Expisición / Empresa":                          "Exposición / Empresa",
 }
 
 def normalizar_rubro(r):
